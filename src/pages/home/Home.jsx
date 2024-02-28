@@ -1,6 +1,12 @@
 import React from "react";
 import NavBar from "../../components/NavBar";
-import { CustomedHome, CardView, Card, CardContent } from "../../styled/home";
+import {
+  CustomedHome,
+  AssetBox,
+  CardView,
+  Card,
+  CardContent,
+} from "../../styled/home";
 import imgUrl from "../../asset/ex2.png";
 import BannerImg from "../../asset/banner.png";
 
@@ -10,11 +16,11 @@ function Home(props) {
       <CustomedHome>
         <img src={BannerImg} className="bannerImg" alt="Example Image" />
 
-        <div className="recentAsset">
-          <p>현재</p>
-          <p>김구름님의 자산</p>
-          <p>100,000원</p>
-        </div>
+        <AssetBox className="recentAsset">
+          <p className="recent">현재</p>
+          <p className="asset">김구름님의 자산</p>
+          <p className="price">100,000원</p>
+        </AssetBox>
 
         <CardView>
           <Card>

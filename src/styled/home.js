@@ -6,9 +6,55 @@ export const CustomedHome = styled.div`
   padding: 0;
   overflow: hidden;
 
+  position: relative;
+
+  p {
+    margin: 0;
+  }
+
   .bannerImg {
     width: 390px;
     height: 446px;
+  }
+`;
+
+export const AssetBox = styled.div`
+  position: absolute; /* Card에 대한 절대 포지셔닝 */
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 8px 8px 8px 0px #4300d10d;
+
+  .recent {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 40;
+    font-size: 12px;
+    color: #999;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .asset {
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin-left: 30px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .price {
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    color: #5e74f9;
+    margin-left: 10px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 100px;
   }
 `;
 
@@ -16,6 +62,7 @@ export const CardView = styled.div`
   width: 350px;
   height: 180px;
   margin-left: 20px;
+  margin-top: 100px;
   white-space: nowrap;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
