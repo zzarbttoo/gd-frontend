@@ -1,9 +1,13 @@
 import React from 'react';
+import NavBar from '../../components/NavBar';
 
 function Home(props) {
     return (
         <div>
-            홈화면
+            <div>
+                홈화면
+            </div>
+            <NavBar />
         </div>
     );
 }
