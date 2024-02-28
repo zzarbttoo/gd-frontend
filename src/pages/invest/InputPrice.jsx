@@ -45,7 +45,6 @@ function InputPrice(props) {
       <div className="nextBtn" onClick={handleNext}>
         다음
       </div>
-      <NavBar />
     </CustomedInputPrice>
   );
 }

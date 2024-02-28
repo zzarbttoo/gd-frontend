@@ -15,7 +15,6 @@ function LoadingInvest(props) {
       </div>
       <div className="loadingText">건물주 되기 1분전...</div>
       <img src={loadingImg} className="loadingImg" alt="example image" />
-      <NavBar />
     </CustomedInputPrice>
   );
 }
