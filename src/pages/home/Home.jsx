@@ -21,6 +21,46 @@ function Home(props) {
           <p className="price">100,000원</p>
         </AssetBox>
 
+        <p className="firstCate">지금 인기 있는 빈집</p>
+        <p className="firstAll">모두보기{">"}</p>
+
+        <CardView>
+          <Card>
+            <img src={imgUrl} alt="Example Image 1" />
+            <CardContent>
+              <p className="cardTitle">Title</p>
+              <p className="cardDetail">Description</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <img src={imgUrl} alt="Example Image 1" />
+            <CardContent>
+              <p className="cardTitle">Title</p>
+              <p className="cardDetail">Description</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <img src={imgUrl} alt="Example Image 1" />
+            <CardContent>
+              <p className="cardTitle">Title</p>
+              <p className="cardDetail">Description</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <img src={imgUrl} alt="Example Image 1" />
+            <CardContent>
+              <p className="cardTitle">Title</p>
+              <p className="cardDetail">Description</p>
+            </CardContent>
+          </Card>
+        </CardView>
+
+        <p className="secondCate">이제 나온 신규 빈집</p>
+        <p className="secondAll">모두보기{">"}</p>
+
         <CardView>
           <Card>
             <img src={imgUrl} alt="Example Image 1" />
