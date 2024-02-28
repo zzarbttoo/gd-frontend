@@ -37,14 +37,6 @@ function InputPrice(props) {
     navigate(-1);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/complete");
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [navigate]);
-
   return (
     <CustomedInputPrice>
       <div style={{ margin: "20px 10px 0px 10px" }}>
@@ -52,24 +44,39 @@ function InputPrice(props) {
       </div>
       <p
         style={{
-          fontSize: '24px',
-          marginTop: '30px',
-          marginBottom: '10px'
-        }}>
-        <span style={{
-          fontWeight: '700',
-          marginLeft: '20px',
-          fontSize: '24px',
-        }}>
-          삼도이동 602-1</span> <br />
-        <div style={{
-          fontWeight: '700',
-          marginLeft: '20px',
-          fontSize: '24px',
-        }}>(제주 아이린아파트 5차) 
-        <span stype={{
-          fontWeight: '400'
-        }}> 에</span></div></p>
+          fontSize: "24px",
+          marginTop: "30px",
+          marginBottom: "10px",
+        }}
+      >
+        <span
+          style={{
+            fontWeight: "700",
+            marginLeft: "20px",
+            fontSize: "24px",
+          }}
+        >
+          삼도이동 602-1
+        </span>{" "}
+        <br />
+        <div
+          style={{
+            fontWeight: "700",
+            marginLeft: "20px",
+            fontSize: "24px",
+          }}
+        >
+          (제주 아이린아파트 5차)
+          <span
+            stype={{
+              fontWeight: "400",
+            }}
+          >
+            {" "}
+            에
+          </span>
+        </div>
+      </p>
       <input
         type="number"
         className="inputNum"
