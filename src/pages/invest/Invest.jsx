@@ -27,12 +27,14 @@ import {
     People,
     DateInfo,
     IngBanner,
+    DDay,
 } from "../../styled/invest";
 import MapTest from "./mytest";
 
 function Invest(props) {
     const [selectedFilter, setSelectedFilter] = useState("전체");
     const [isMapView, setIsMapView] = useState(false);
+    const [homeList, setHomeList] = useState([]);
     const navigate = useNavigate();
 
     const handleFilterClick = (filter) => {
@@ -54,7 +56,7 @@ function Invest(props) {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                console.log(data);
+                setHomeList(data.homeList.reverse());
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -105,35 +107,55 @@ function Invest(props) {
                 <SortBoxLast style={{ color: "gray" }}>최고 가격</SortBoxLast>
             </SortingContainer>
             {
-                isMapView ?
+                isMapView
+                    ?
                     <MapTest />
                     :
-                    <HouseContainer onClick={handleClick}>
-                        <HouseImage style={{
-                            backgroundImage: `url('https://i.ibb.co/j6DT0Mw/image.jpg')`,
-                        }}></HouseImage>
-                        <TextContainer>
-                            {/* 곧모집 - SoonBanner, 모집중 - IngBanner , 디데이 추가 필요*/}
-                            {/* <SoonBanner>곧 모집</SoonBanner> */}
-                            <IngBanner>모집 중</IngBanner>
-                            <Title>서귀포시 성산읍</Title>
-                            {/* 곧모집 - price, 모집중 - 현황 */}
-                            {/* <Price>2억 7000만 원</Price> */}
-
-                            <CurrentContainer>
-                                <LeftContainer>
-                                    <MoneyLeft>900만 원 남음</MoneyLeft>
-                                    <Total>2억 원</Total>
-                                </LeftContainer>
-                                <BarGraph fillPercentage={95}></BarGraph>
-                                <CountContainer>
-                                    <People>101명 참여</People>
-                                    <DateInfo>2023.03.05</DateInfo>
-                                </CountContainer>
-                            </CurrentContainer>
-                            {/* <DateInformation>2024 7월 중 오픈</DateInformation> */}
-                        </TextContainer>
-                    </HouseContainer>
+                    (
+                        homeList.reverse().map((home, index) => (
+                            <HouseContainer
+                                onClick={handleClick}
+                                key={index}>
+                                <HouseImage style={{
+                                    backgroundImage: `url('data:image/jpeg;base64,${home.before_image_base64}')`,
+                                }}></HouseImage>
+                                <TextContainer>
+                                    {home.is_funding_done === true ?
+                                        <SoonBanner>곧 모집</SoonBanner> :
+                                        (
+                                            <div style={{
+                                                display: 'flex',
+                                                flexDirection: 'row',
+                                                gap: '5px'
+                                            }}>
+                                                <IngBanner>모집 중</IngBanner>
+                                                <DDay>D-{home.funding_last_date}</DDay>
+                                            </div>
+                                        )
+                                    }
+                                    <Title>{home.address}</Title>
+                                    {home.is_funding_done === true ?
+                                        <div>
+                                            <Price>{home.sale_price} (백만원)</Price>
+                                            <DateInformation>2024 7월 중 오픈</DateInformation>
+                                        </div>
+                                        :
+                                        <CurrentContainer>
+                                            <LeftContainer>
+                                                <MoneyLeft>900만 원 남음</MoneyLeft>
+                                                <Total>{home.sale_price} (백만원)</Total>
+                                            </LeftContainer>
+                                            <BarGraph fillPercentage={Number(home.width)}></BarGraph>
+                                            <CountContainer>
+                                                <People>{home.num_of_people}명 참여</People>
+                                                <DateInfo>{home.funding_done_date.split('T')[0]}</DateInfo>
+                                            </CountContainer>
+                                        </CurrentContainer>
+                                    }
+                                </TextContainer>
+                            </HouseContainer>
+                        ))
+                    )
             }
             <NavBar />
         </div >

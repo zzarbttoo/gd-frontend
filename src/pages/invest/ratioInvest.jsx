@@ -22,7 +22,7 @@ function RatioInvest(props) {
       </div>
       <div style={{ height: '20px' }} />
       <p className="ratioTitle">
-        <span className="ratioAddr">제주시 성산읍 빈집8483 </span>에
+        <span className="ratioAddr">삼도이동 602-1 </span>에
       </p>
       <p className="ratioTitle">총 2억 5000 만 원 중</p>
       <p className="ratioTitle">

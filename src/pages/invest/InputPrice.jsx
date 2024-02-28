@@ -52,22 +52,24 @@ function InputPrice(props) {
       </div>
       <p
         style={{
-          fontSize: "24px",
-          marginTop: "30px",
-          marginBottom: "10px",
-        }}
-      >
-        <span
-          style={{
-            fontWeight: "700",
-            marginLeft: "20px",
-            fontSize: "24px",
-          }}
-        >
-          서귀포시 성산읍 빈집 8483
-        </span>{" "}
-        에
-      </p>
+          fontSize: '24px',
+          marginTop: '30px',
+          marginBottom: '10px'
+        }}>
+        <span style={{
+          fontWeight: '700',
+          marginLeft: '20px',
+          fontSize: '24px',
+        }}>
+          삼도이동 602-1</span> <br />
+        <div style={{
+          fontWeight: '700',
+          marginLeft: '20px',
+          fontSize: '24px',
+        }}>(제주 아이린아파트 5차) 
+        <span stype={{
+          fontWeight: '400'
+        }}> 에</span></div></p>
       <input
         type="number"
         className="inputNum"

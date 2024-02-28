@@ -27,7 +27,7 @@ function InvestDetail(props) {
                 <BackButton onClick={handleGoBack}></BackButton>
             </BackContainer>
             <DetailContainer>
-                서귀포시 성산읍
+                삼도이동 602-1(제주 아이린아파트 5차)
                 <img src={Graph} alt='graph' />
                 <AIButtoon>AI 리모델링 미리보기</AIButtoon>
             </DetailContainer>

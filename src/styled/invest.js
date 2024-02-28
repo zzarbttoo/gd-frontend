@@ -167,3 +167,15 @@ export const IngBanner = styled.div`
     color: #5F75FA;
 `;
 
+export const DDay = styled.div`
+    color: #767676;
+    padding: 3px 8px;
+    font-size: 12px;
+    line-height: 24px;
+    background-color: #5F75FA;
+    width: fit-content;
+    border-radius: 8px;
+    color: white;
+`;
+
+
