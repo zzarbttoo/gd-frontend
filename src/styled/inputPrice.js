@@ -11,6 +11,7 @@ export const CustomedInputPrice = styled.div`
     flex-shrink: 0;
     margin-top: 18px;
     margin-left: 25px;
+    margin-bottom: 27px;
   }
 
   .addressTitle {
@@ -49,6 +50,56 @@ export const CustomedInputPrice = styled.div`
     margin-left: 20px;
   }
   .nextBtn {
+    width: 342px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #5f75fa;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 380px;
+    margin-left: 24px;
+
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .ratioAddr {
+    color: #181a20;
+    text-align: center;
+
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-weight: bold;
+  }
+  .ratioPrice {
+    color: #5f75fa;
+
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  .ratioTitle {
+    margin: 0;
+    color: #767676;
+    line-height: 36px;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+
+    text-align: center;
+  }
+
+  .investBtn {
     width: 342px;
     height: 50px;
     border-radius: 12px;

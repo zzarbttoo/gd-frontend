@@ -44,8 +44,7 @@ function InputPrice(props) {
       <p className="notice">최소 5천원부터 가능해요</p>
       <div className="nextBtn" onClick={handleNext}>
         다음
-      </div>{" "}
-      {/* 다음 버튼에 클릭 핸들러 추가 */}
+      </div>
       <NavBar />
     </CustomedInputPrice>
   );
