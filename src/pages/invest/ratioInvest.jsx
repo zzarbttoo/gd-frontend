@@ -15,7 +15,6 @@ function RatioInvest(props) {
     navigate('/loading-invest');
   }
 
-
   return (
     <CustomedInputPrice>
       <div style={{ margin: '20px 10px 0px 10px' }}>
