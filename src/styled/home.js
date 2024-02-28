@@ -18,28 +18,32 @@ export const CustomedHome = styled.div`
   }
 
   .firstCate {
-    font-family: "Pretendard", sans-serif;
-    font-size: 18px;
     color: #111;
-    font-weight: bold;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    \font-weight: bold;
     margin-left: 30px;
-    margin-top: 80px;
+    margin-top: 125px;
     display: inline-block;
   }
   .secondCate {
-    font-family: "Pretendard", sans-serif;
-    font-size: 18px;
     color: #111;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
     font-weight: bold;
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top: 47px;
     display: inline-block;
   }
   .firstAll,
   .secondAll {
     font-family: "Pretendard", sans-serif;
     font-size: 12px;
-    color: #111;
+    color: #767676;
     display: inline-block;
     margin-left: 100px;
   }
@@ -47,47 +51,60 @@ export const CustomedHome = styled.div`
 
 export const AssetBox = styled.div`
   position: absolute; /* Card에 대한 절대 포지셔닝 */
-  top: 400px;
+  top: 425px;
   left: 50%;
   transform: translateX(-50%);
   width: 350px;
   height: 100px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: white;
   box-shadow: 8px 8px 8px 0px #4300d10d;
 
   .recent {
     font-family: "Pretendard", sans-serif;
-    font-weight: 40;
+    font-weight: 500;
     font-size: 12px;
     color: #999;
-    margin-left: 30px;
-    margin-top: 30px;
+    margin-left: 15px;
+    margin-top: 26px;
+  }
+
+  .nameAsset {
+    color: #181a20;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-weight: bold;
   }
 
   .asset {
-    font-family: "Pretendard", sans-serif;
-    font-size: 16px;
-    color: #000;
-    margin-left: 30px;
-    display: inline-block;
-    margin-top: 10px;
-  }
+    color: #767676;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 15px;
 
-  .price {
-    font-family: "Pretendard", sans-serif;
-    font-size: 15px;
-    color: #5e74f9;
-    margin-left: 10px;
-    font-weight: bold;
     display: inline-block;
-    margin-left: 100px;
+  }
+  .price {
+    color: #5f75fa;
+    display: inline-block;
+    font-size: 15px;
+  }
+  .price > span {
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 80px;
   }
 `;
 
 export const CardView = styled.div`
   width: 100%;
-  height: 180px;
+  height: 210px;
   margin-left: 20px;
   margin-top: 15px;
   white-space: nowrap;
@@ -104,8 +121,8 @@ export const CardView = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 160px;
-  height: 170px;
+  width: 210px;
+  height: 200px;
   border-radius: 10px;
   overflow: hidden; /* 이미지가 부모 요소를 벗어나는 것을 제어 */
   margin-right: 16px;
@@ -182,7 +199,7 @@ export const CardContent = styled.div`
   position: absolute; /* Card에 대한 절대 포지셔닝 */
   bottom: 0; /* 아래로부터 상대적으로 배치 */
   left: 0; /* 왼쪽으로부터 상대적으로 배치 */
-  width: 160px; /* Card의 너비에 맞추기 */
+  width: 190px; /* Card의 너비에 맞추기 */
   padding: 10px; /* 여백 추가 */
   text-align: left;
   margin: 0;
@@ -195,21 +212,21 @@ export const CardContent = styled.div`
   );
 
   .cardTitle {
-    font-family: "Pretendard", sans-serif;
-    font-weight: 500;
-    line-height: 22px;
-    font-size: 14px;
     color: #fff;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
     margin-top: 3px;
   }
 
   .cardDetail {
-    width: 140px;
-    font-family: "Pretendard", sans-serif;
-    font-weight: 400;
-    line-height: 10px;
-    font-size: 8px;
     color: #fff;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
     white-space: pre-wrap;
   }
 `;
