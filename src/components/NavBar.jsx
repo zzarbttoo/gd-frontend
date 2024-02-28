@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { CustomedNavBar } from '../styled/bottomNav';
-import homeGray from '../asset/home-gray.png';
+import homeGray from '../asset/homegray.png';
 import homeBlue from '../asset/home-blue.png';
 import investGray from '../asset/category-gray.png';
 import investBlue from '../asset/invest-blue.png';

@@ -1,13 +1,15 @@
-import React from "react";
-import NavBar from "../../components/NavBar";
+
+import React from 'react';
+import NavBar from '../../components/NavBar';
+import { TabName } from '../../styled/invest';
 
 function CurrentInvest(props) {
-  return (
-    <div>
-      투자하기
-      <NavBar />
-    </div>
-  );
+    return (
+        <div>
+            <TabName>투자 현황</TabName>
+            <NavBar />
+        </div>
+    );
 }
 
 export default CurrentInvest;
