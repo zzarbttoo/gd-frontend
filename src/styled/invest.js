@@ -33,6 +33,5 @@ export const MapButton = styled.button`
     height: 25px;
     padding:3px 8px;
     border-radius: 8px;
-    border: solid 2cqwpx #1D6CE0;
-
+    border: solid 2px #1D6CE0;
 `;
