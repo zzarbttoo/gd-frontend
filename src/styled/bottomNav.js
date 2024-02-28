@@ -4,7 +4,7 @@ export const CustomedNavBar = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 60px;
   margin: 0 auto;
   background-color: white;
 
