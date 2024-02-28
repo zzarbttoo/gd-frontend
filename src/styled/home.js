@@ -15,6 +15,33 @@ export const CustomedHome = styled.div`
     width: 100%;
     height: 470px;
   }
+
+  .firstCate {
+    font-family: "Pretendard", sans-serif;
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 80px;
+    display: inline-block;
+  }
+  .secondCate {
+    font-family: "Pretendard", sans-serif;
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .firstAll,
+  .secondAll {
+    font-family: "Pretendard", sans-serif;
+    font-size: 12px;
+    color: #111;
+    display: inline-block;
+    margin-left: 100px;
+  }
 `;
 
 export const AssetBox = styled.div`
@@ -61,7 +88,7 @@ export const CardView = styled.div`
   width: 100%;
   height: 180px;
   margin-left: 20px;
-  margin-top: 100px;
+  margin-top: 15px;
   white-space: nowrap;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */

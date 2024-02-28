@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { CustomedNavBar } from '../styled/bottomNav';
-
 import homeGray from '../asset/home-gray.png';
 import homeBlue from '../asset/home-blue.png';
 import investGray from '../asset/category-gray.png';
@@ -12,6 +11,7 @@ import profileGray from '../asset/profile-gray.png';
 import profileBlue from '../asset/profile-blue.png';
 
 function NavBar(props) {
+
     const location = useLocation();
 
     const getIcon = (path) => {

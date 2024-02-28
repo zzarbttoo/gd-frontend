@@ -7,4 +7,18 @@ export const CustomedNavBar = styled.div`
   height: 60px;
   margin: 0 auto;
   background-color: white;
+
+  .iconText_b {
+    margin-top: 5px;
+    font-family: "Pretendard", sans-serif;
+    font-size: 8px;
+    color: #5f75fa;
+  }
+
+  .iconText {
+    margin-top: 5px;
+    font-family: "Pretendard", sans-serif;
+    font-size: 8px;
+    color: #767676;
+  }
 `;
