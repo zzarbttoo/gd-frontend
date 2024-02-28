@@ -5,6 +5,7 @@ import CurrentInvest from "./pages/current/CurrentInvest";
 import Mypage from "./pages/mypage/Mypage";
 import InputPrice from "./pages/invest/InputPrice";
 import RatioInvest from "./pages/invest/ratioInvest";
+import LoadingInvest from "./pages/invest/LoadingInvest";
 
 const Router = () => {
   return (
@@ -15,6 +16,7 @@ const Router = () => {
       <Route path="/mypage" element={<Mypage />} />
       <Route path="/input-price" element={<InputPrice />} />
       <Route path="/ratio-price" element={<RatioInvest />} />
+      <Route path="/loading-invest" element={<LoadingInvest />} />
     </Routes>
   );
 };
