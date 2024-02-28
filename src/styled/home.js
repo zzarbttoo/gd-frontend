@@ -13,7 +13,7 @@ export const CustomedHome = styled.div`
 
   .bannerImg {
     width: 100%;
-    height: 470px;
+    height: 450px;
   }
 
   .firstCate {
@@ -46,7 +46,7 @@ export const CustomedHome = styled.div`
 
 export const AssetBox = styled.div`
   position: absolute; /* Card에 대한 절대 포지셔닝 */
-  top: 430px;
+  top: 400px;
   left: 50%;
   transform: translateX(-50%);
   width: 350px;
