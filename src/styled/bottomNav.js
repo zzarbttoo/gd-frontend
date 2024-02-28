@@ -6,7 +6,7 @@ export const CustomedNavBar = styled.div`
   width: 100%;
   height: 60px;
   margin: 0 auto;
-  background-color: white;
+  background-color: #F8F8FA;
 
   .iconText_b {
     margin-top: 5px;

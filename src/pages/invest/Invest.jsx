@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -41,12 +41,26 @@ function Invest(props) {
         setIsMapView(prevIsMapView => !prevIsMapView);
     };
 
-
-
     const handleClick = () => {
         navigate("/invest-detail");
     };
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/api/home/');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log(data); 
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <div>
@@ -101,7 +115,7 @@ function Invest(props) {
                             {/* 곧모집 - SoonBanner, 모집중 - IngBanner , 디데이 추가 필요*/}
                             {/* <SoonBanner>곧 모집</SoonBanner> */}
                             <IngBanner>모집 중</IngBanner>
-                            <Title>서귀포시 남원리</Title>
+                            <Title>서귀포시 성산읍</Title>
                             {/* 곧모집 - price, 모집중 - 현황 */}
                             {/* <Price>2억 7000만 원</Price> */}
 

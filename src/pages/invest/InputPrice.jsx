@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "../../components/NavBar";
+import { useNavigate } from 'react-router-dom';
 import { CustomedInputPrice } from "../../styled/inputPrice";
-
-import arrowIcon from "../../asset/arrow.png";
+import { BackButton } from "../../styled/investDetail";
 
 function InputPrice(props) {
+  const navigate = useNavigate();
+
   const [inputValue, setInputValue] = useState("");
   const [investAmount, setInvestAmount] = useState("");
 
   const handleChange = (e) => {
     const value = e.target.value;
-    // 숫자가 아닌 경우에는 빈 문자열로 대체
-    const newValue = value.replace(/\D/g, "");
-    setInputValue(newValue);
+    setInputValue(value);
   };
 
   useEffect(() => {
-    setInvestAmount(inputValue); // 입력된 값으로 investAmount 업데이트
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
+    setInvestAmount(inputValue);
   }, [inputValue]);
 
   const handleNext = () => {
@@ -27,24 +30,56 @@ function InputPrice(props) {
     }
     console.log("Invest amount:", investAmount); // 예시: 입력된 투자 금액을 콘솔에 출력
     // 이곳에 다음 단계로 넘어가는 로직 추가
+    navigate('/ratio-price');
   };
+
+  const handleGoBack = () => {
+    navigate(-1);
+  }
 
   return (
     <CustomedInputPrice>
-      <img src={arrowIcon} className="arrowIcon" alt="Example Image" />
-      <p className="addressTitle">제주시 애월읍 33 빈집 8483 에</p>
-      <div className="line"></div>
+      <div style={{ margin: '20px 10px 0px 10px' }}>
+        <BackButton onClick={handleGoBack}></BackButton>
+      </div>
+      <p
+        style={{
+          fontSize: '24px',
+          marginTop: '30px',
+          marginBottom: '10px'
+        }}>
+        <span style={{
+          fontWeight: '700',
+          marginLeft: '20px',
+          fontSize: '24px',
+        }}>
+          서귀포시 성산읍 빈집 8483</span> 에</p>
       <input
-        type="text"
+        type="number"
         className="inputNum"
         value={inputValue}
         onChange={handleChange}
         placeholder="얼마를 투자하시겠어요?"
+        style={{
+          marginTop: '0px',
+          width: '300px',
+          height: 'auto',
+          fontSize: '16px',
+          padding: '8px 0px 8px 0px',
+          marginLeft: '20px',
+          fontWeight: '500'
+        }}
       />
-      <p className="notice">최소 5천원부터 가능해요</p>
-      <div className="nextBtn" onClick={handleNext}>
-        다음
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        margin: '0 auto',
+      }}>
+        <div className="nextBtn" onClick={handleNext}>
+          다음
+        </div>
       </div>
+     
     </CustomedInputPrice>
   );
 }
