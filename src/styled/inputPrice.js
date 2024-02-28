@@ -4,7 +4,7 @@ export const CustomedInputPrice = styled.div`
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
+ 
 
   .arrowIcon {
     width: 10px;
@@ -58,7 +58,7 @@ export const CustomedInputPrice = styled.div`
     margin-left: 20px;
   }
   .nextBtn {
-    width: 342px;
+    width: 90%;
     height: 50px;
     border-radius: 12px;
     background-color: #5f75fa;
@@ -68,8 +68,11 @@ export const CustomedInputPrice = styled.div`
     justify-content: center;
     align-items: center;
 
-    margin-top: 380px;
-    margin-left: 24px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 
     font-family: Pretendard;
     font-size: 16px;
@@ -108,7 +111,7 @@ export const CustomedInputPrice = styled.div`
   }
 
   .investBtn {
-    width: 342px;
+    width: 90%;
     height: 50px;
     border-radius: 12px;
     background-color: #5f75fa;
@@ -118,8 +121,11 @@ export const CustomedInputPrice = styled.div`
     justify-content: center;
     align-items: center;
 
-    margin-top: 380px;
-    margin-left: 24px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 
     font-family: Pretendard;
     font-size: 16px;

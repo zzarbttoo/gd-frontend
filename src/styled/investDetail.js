@@ -22,7 +22,7 @@ export const DetailContainer = styled.div`
     position: relative; 
     top: 0px; 
     height: auto;
-    background-color: white;
+    background-color: #F8F8FA;
     border-radius: 24px;
     padding: 20px;
     justify-content: center;
@@ -75,10 +75,9 @@ export const ButtonContainer = styled.div`
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
     padding: 20px;
-
 `;
 export const LikeButton = styled.div`
     width: 20px;
@@ -94,7 +93,11 @@ export const LikeButton = styled.div`
 `;
 export const InvestButton = styled.div`
     background-color: #6C95FF;
-    padding: 14px 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     border-radius: 12px;
+    width: 100%;
+    font-size: 16px;
 `;

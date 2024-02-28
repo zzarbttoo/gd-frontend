@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { BackContainer, BackButton, DetailContainer, AIButtoon, SelectContainer, Point, Detail, ButtonContainer, LikeButton, InvestButton } from '../../styled/investDetail';
 import Graph from '../../asset/Group 169.png';
 import Cart from '../../asset/shopping-cart.png';
+import Details from '../../asset/Group 221.png';
+import Map from '../../asset/Group 222.png';
 
 function InvestDetail(props) {
     const navigate = useNavigate();
@@ -16,6 +18,9 @@ function InvestDetail(props) {
         setSelectedTab(tab);
     };
 
+    const clickHandler = () => {
+        navigate('/input-price');
+    }
     return (
         <div>
             <BackContainer>
@@ -31,20 +36,23 @@ function InvestDetail(props) {
                 <Detail onClick={() => handleTabClick('detail')} style={{ borderBottom: selectedTab === 'detail' ? '3px solid #4F80E2' : '#A9ABB8', color: selectedTab === 'detail' ? '#4F80E2' : '#A9ABB8'}}>상세 정보</Detail>
             </SelectContainer>
             {selectedTab === 'point' && (
-                <div>
-                    투자 해야 되는 이유이유이유
-                </div>
+                <img src={Details} alt='detail' style={{
+                    width : '100%',
+                    marginTop: '20px',
+                    height: 'auto'
+                }} />
             )}
             {selectedTab === 'detail' && (
-                <div>
-                    상세 정보 여기에 지도 띄워주면 됩니다!!
-                </div>
+                <img src={Map} alt="map" style={{
+                    width: '100%',
+                    paddingTop: '10px',
+                }} />
             )}
             <ButtonContainer>
                 <LikeButton>
                     <img src={Cart} alt='cart' />
                 </LikeButton>
-                <InvestButton>투자 하기</InvestButton>
+                <InvestButton onClick={clickHandler}>투자 하기</InvestButton>
             </ButtonContainer>
         </div>
     );
