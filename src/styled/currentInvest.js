@@ -15,3 +15,16 @@ export const Toggle = styled.div`
     color: ${props => props.selected ? '#5F75FA' : '#525463'};
     border-radius: 8px;
 `;
+
+export const CompleteBtn = styled.div`
+    background-color: #F0F0F5;
+    width: 90%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 1%;
+    padding: 13px;
+    border-radius: 12px;
+    margin: 0 auto;
+`;
