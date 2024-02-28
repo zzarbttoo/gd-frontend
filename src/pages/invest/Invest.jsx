@@ -1,46 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar';
 import { useNavigate } from 'react-router-dom';
+
 import {
-    TabName,
-    SelectContainer,
-    FilteringContainer,
-    MapButton,
-    FilteringButton,
-    SortingContainer,
-    SortBox,
-    SortBoxLast,
-    HouseContainer,
-    HouseImage,
-    TextContainer,
-    SoonBanner,
-    Title,
-    Price,
-    DateInformation,
-    CurrentContainer,
-    LeftContainer,
-    MoneyLeft,
-    Total,
-    BarGraph,
-    CountContainer,
-    People,
-    DateInfo,
-    IngBanner,
-} from '../../styled/invest';
+  TabName,
+  SelectContainer,
+  FilteringContainer,
+  MapButton,
+  FilteringButton,
+  SortingContainer,
+  SortBox,
+  SortBoxLast,
+  HouseContainer,
+  HouseImage,
+  TextContainer,
+  SoonBanner,
+  Title,
+  Price,
+  DateInformation,
+  CurrentContainer,
+  LeftContainer,
+  MoneyLeft,
+  Total,
+  BarGraph,
+  CountContainer,
+  People,
+  DateInfo,
+  IngBanner,
+} from "../../styled/invest";
+import MapTest from "./mytest";
 
 function Invest(props) {
-    const [selectedFilter, setSelectedFilter] = useState('전체');
-    const [isMapView, setIsMapView] = useState(false);
-    const navigate = useNavigate();
+  const [selectedFilter, setSelectedFilter] = useState("전체");
+  const [isMapView, setIsMapView] = useState(false);
+  const navigate = useNavigate();
 
-    const handleFilterClick = (filter) => {
-        setSelectedFilter(prevFilter => prevFilter === filter ? '' : filter);
-    };
+  const handleFilterClick = (filter) => {
+    setSelectedFilter((prevFilter) => (prevFilter === filter ? "" : filter));
+  };
 
-    const toggleView = () => {
-        setIsMapView(prevIsMapView => !prevIsMapView);
-    };
-
+  const toggleView = () => {
+    setIsMapView((prevIsMapView) => !prevIsMapView);
+  };
     const handleClick = () => {
         navigate("/invest-detail");
     };
@@ -134,12 +135,25 @@ function Invest(props) {
                         </TextContainer>
                     </HouseContainer>
 
+            <CurrentContainer>
+              <LeftContainer>
+                <MoneyLeft>900만 원 남음</MoneyLeft>
+                <Total>2억 원</Total>
+              </LeftContainer>
+              <BarGraph fillPercentage={95}></BarGraph>
+              <CountContainer>
+                <People>101명 참여</People>
+                <DateInfo>2023.03.05</DateInfo>
+              </CountContainer>
+            </CurrentContainer>
+            {/* <DateInformation>2024 7월 중 오픈</DateInformation> */}
+          </TextContainer>
+        </HouseContainer>
+      )}
 
-            }
-
-            <NavBar />
-        </div>
-    );
+      <NavBar />
+    </div>
+  );
 }
 
 export default Invest;

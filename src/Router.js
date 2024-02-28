@@ -8,6 +8,7 @@ import RatioInvest from "./pages/invest/ratioInvest";
 import LoadingInvest from "./pages/invest/LoadingInvest";
 import Complete from "./pages/invest/Complete";
 import InvestDetail from "./pages/invest/InvestDetail.jsx";
+import MapTest from "./pages/invest/mytest.jsx";
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
       <Route path="/ratio-price" element={<RatioInvest />} />
       <Route path="/loading-invest" element={<LoadingInvest />} />
       <Route path="/complete" element={<Complete />} />
+      <Route path="/maptest" element={<MapTest />} />
     </Routes>
   );
 };
