@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavBar from '../../components/NavBar';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import {
     TabName,
     SelectContainer,
@@ -31,7 +31,7 @@ import {
 function Invest(props) {
     const [selectedFilter, setSelectedFilter] = useState('전체');
     const [isMapView, setIsMapView] = useState(false);
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const handleFilterClick = (filter) => {
         setSelectedFilter(prevFilter => prevFilter === filter ? '' : filter);
@@ -89,32 +89,40 @@ function Invest(props) {
                 <SortBox style={{ color: "gray" }}>최저 가격</SortBox>
                 <SortBoxLast style={{ color: "gray" }}>최고 가격</SortBoxLast>
             </SortingContainer>
-            <HouseContainer onClick={handleClick}>
-                <HouseImage style={{
-                    backgroundImage: `url('https://i.ibb.co/j6DT0Mw/image.jpg')`,
-                }}></HouseImage>
-                <TextContainer>
-                    {/* 곧모집 - SoonBanner, 모집중 - IngBanner , 디데이 추가 필요*/}
-                    {/* <SoonBanner>곧 모집</SoonBanner> */}
-                    <IngBanner>모집 중</IngBanner>
-                    <Title>서귀포시 남원리</Title>
-                    {/* 곧모집 - price, 모집중 - 현황 */}
-                    {/* <Price>2억 7000만 원</Price> */}
+            {
+                isMapView ?
+                    <div>지도 띄우기 </div>
+                    :
+                    <HouseContainer onClick={handleClick}>
+                        <HouseImage style={{
+                            backgroundImage: `url('https://i.ibb.co/j6DT0Mw/image.jpg')`,
+                        }}></HouseImage>
+                        <TextContainer>
+                            {/* 곧모집 - SoonBanner, 모집중 - IngBanner , 디데이 추가 필요*/}
+                            {/* <SoonBanner>곧 모집</SoonBanner> */}
+                            <IngBanner>모집 중</IngBanner>
+                            <Title>서귀포시 남원리</Title>
+                            {/* 곧모집 - price, 모집중 - 현황 */}
+                            {/* <Price>2억 7000만 원</Price> */}
 
-                    <CurrentContainer>
-                        <LeftContainer>
-                            <MoneyLeft>900만 원 남음</MoneyLeft>
-                            <Total>2억 원</Total>
-                        </LeftContainer>
-                        <BarGraph fillPercentage={95}></BarGraph>
-                        <CountContainer>
-                            <People>101명 참여</People>
-                            <DateInfo>2023.03.05</DateInfo>
-                        </CountContainer>
-                    </CurrentContainer>
-                    {/* <DateInformation>2024 7월 중 오픈</DateInformation> */}
-                </TextContainer>
-            </HouseContainer>
+                            <CurrentContainer>
+                                <LeftContainer>
+                                    <MoneyLeft>900만 원 남음</MoneyLeft>
+                                    <Total>2억 원</Total>
+                                </LeftContainer>
+                                <BarGraph fillPercentage={95}></BarGraph>
+                                <CountContainer>
+                                    <People>101명 참여</People>
+                                    <DateInfo>2023.03.05</DateInfo>
+                                </CountContainer>
+                            </CurrentContainer>
+                            {/* <DateInformation>2024 7월 중 오픈</DateInformation> */}
+                        </TextContainer>
+                    </HouseContainer>
+
+
+            }
+
             <NavBar />
         </div>
     );
