@@ -8,7 +8,9 @@ import {
   CardContent,
 } from "../../styled/home";
 import imgUrl from "../../asset/ex2.png";
+import personIcon from "../../asset/personIcon.png";
 import BannerImg from "../../asset/banner.png";
+import heartIcon from "../../asset/heart.png";
 
 function Home(props) {
   return (
@@ -26,34 +28,57 @@ function Home(props) {
 
         <CardView>
           <Card>
-            <img src={imgUrl} alt="Example Image 1" />
+            <img src={imgUrl} className="zipImg" alt="Example Image 1" />
+            <img src={heartIcon} className="heartIcon" alt="Example Image" />
             <CardContent>
-              <p className="cardTitle">Title</p>
-              <p className="cardDetail">Description</p>
+              <div className="goal">달성률 40%</div>
+              <p className="total_price">| 2억원</p>
+              <p className="cardTitle">한림 마을 휴양 주택</p>
+              <p className="cardDetail">
+                제주의 함림에서 당신의 휴양주택에 투자해보세요!
+              </p>
+              <img
+                src={personIcon}
+                className="personIcon"
+                alt="person Image"
+              ></img>
+              <p className="numJoin">1000명 참여</p>
             </CardContent>
           </Card>
-
           <Card>
-            <img src={imgUrl} alt="Example Image 1" />
+            <img src={imgUrl} className="zipImg" alt="Example Image 1" />
+            <img src={heartIcon} className="heartIcon" alt="Example Image" />
             <CardContent>
-              <p className="cardTitle">Title</p>
-              <p className="cardDetail">Description</p>
+              <div className="goal">달성률 40%</div>
+              <p className="total_price">| 2억원</p>
+              <p className="cardTitle">한림 마을 휴양 주택</p>
+              <p className="cardDetail">
+                제주의 함림에서 당신의 휴양주택에 투자해보세요!
+              </p>
+              <img
+                src={personIcon}
+                className="personIcon"
+                alt="person Image"
+              ></img>
+              <p className="numJoin">1000명 참여</p>
             </CardContent>
           </Card>
-
           <Card>
-            <img src={imgUrl} alt="Example Image 1" />
+            <img src={imgUrl} className="zipImg" alt="Example Image 1" />
+            <img src={heartIcon} className="heartIcon" alt="Example Image" />
             <CardContent>
-              <p className="cardTitle">Title</p>
-              <p className="cardDetail">Description</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <img src={imgUrl} alt="Example Image 1" />
-            <CardContent>
-              <p className="cardTitle">Title</p>
-              <p className="cardDetail">Description</p>
+              <div className="goal">달성률 40%</div>
+              <p className="total_price">| 2억원</p>
+              <p className="cardTitle">한림 마을 휴양 주택</p>
+              <p className="cardDetail">
+                제주의 함림에서 당신의 휴양주택에 투자해보세요!
+              </p>
+              <img
+                src={personIcon}
+                className="personIcon"
+                alt="person Image"
+              ></img>
+              <p className="numJoin">1000명 참여</p>
             </CardContent>
           </Card>
         </CardView>
@@ -63,34 +88,57 @@ function Home(props) {
 
         <CardView>
           <Card>
-            <img src={imgUrl} alt="Example Image 1" />
+            <img src={imgUrl} className="zipImg" alt="Example Image 1" />
+            <img src={heartIcon} className="heartIcon" alt="Example Image" />
             <CardContent>
-              <p className="cardTitle">Title</p>
-              <p className="cardDetail">Description</p>
+              <div className="goal">달성률 40%</div>
+              <p className="total_price">| 2억원</p>
+              <p className="cardTitle">한림 마을 휴양 주택</p>
+              <p className="cardDetail">
+                제주의 함림에서 당신의 휴양주택에 투자해보세요!
+              </p>
+              <img
+                src={personIcon}
+                className="personIcon"
+                alt="person Image"
+              ></img>
+              <p className="numJoin">1000명 참여</p>
             </CardContent>
           </Card>
-
           <Card>
-            <img src={imgUrl} alt="Example Image 1" />
+            <img src={imgUrl} className="zipImg" alt="Example Image 1" />
+            <img src={heartIcon} className="heartIcon" alt="Example Image" />
             <CardContent>
-              <p className="cardTitle">Title</p>
-              <p className="cardDetail">Description</p>
+              <div className="goal">달성률 40%</div>
+              <p className="total_price">| 2억원</p>
+              <p className="cardTitle">한림 마을 휴양 주택</p>
+              <p className="cardDetail">
+                제주의 함림에서 당신의 휴양주택에 투자해보세요!
+              </p>
+              <img
+                src={personIcon}
+                className="personIcon"
+                alt="person Image"
+              ></img>
+              <p className="numJoin">1000명 참여</p>
             </CardContent>
           </Card>
-
           <Card>
-            <img src={imgUrl} alt="Example Image 1" />
+            <img src={imgUrl} className="zipImg" alt="Example Image 1" />
+            <img src={heartIcon} className="heartIcon" alt="Example Image" />
             <CardContent>
-              <p className="cardTitle">Title</p>
-              <p className="cardDetail">Description</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <img src={imgUrl} alt="Example Image 1" />
-            <CardContent>
-              <p className="cardTitle">Title</p>
-              <p className="cardDetail">Description</p>
+              <div className="goal">달성률 40%</div>
+              <p className="total_price">| 2억원</p>
+              <p className="cardTitle">한림 마을 휴양 주택</p>
+              <p className="cardDetail">
+                제주의 함림에서 당신의 휴양주택에 투자해보세요!
+              </p>
+              <img
+                src={personIcon}
+                className="personIcon"
+                alt="person Image"
+              ></img>
+              <p className="numJoin">1000명 참여</p>
             </CardContent>
           </Card>
         </CardView>
