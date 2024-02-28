@@ -6,7 +6,7 @@ import arrowIcon from "../../asset/arrow.png";
 
 function InputPrice(props) {
   const [inputValue, setInputValue] = useState("");
-  const [investAmount, setInvestAmount] = useState(""); // 추가된 부분
+  const [investAmount, setInvestAmount] = useState("");
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -20,7 +20,11 @@ function InputPrice(props) {
   }, [inputValue]);
 
   const handleNext = () => {
-    // 다음 버튼 클릭 시 실행할 함수
+    // 입력된 값이 5천원 이상인지 확인
+    if (parseInt(inputValue, 10) < 5000) {
+      alert("최소 5천원 이상을 입력해주세요.");
+      return; // 입력이 5천원 미만이면 함수 종료
+    }
     console.log("Invest amount:", investAmount); // 예시: 입력된 투자 금액을 콘솔에 출력
     // 이곳에 다음 단계로 넘어가는 로직 추가
   };
