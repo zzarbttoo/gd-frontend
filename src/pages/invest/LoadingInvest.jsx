@@ -18,7 +18,7 @@ const LoadingInvest = (props) => {
   return (
     <CustomedInputPrice>
       <p className="loadingTitle">
-        <span className="ratioPrice">50000원</span>을 투자 중입니다
+        <span className="ratioPrice">50,000원</span>을 투자 중입니다
       </p>
       <p className="loadingStrong">잠시만 기다려주세요!</p>
       <div className="loadingAni">

@@ -19,7 +19,7 @@ export const CustomedInputPrice = styled.div`
     flex-shrink: 0;
     margin-top: 18px;
     margin-left: 25px;
-  }
+  } 
 
   .addressTitle {
     font-family: Pretendard;
@@ -68,7 +68,7 @@ export const CustomedInputPrice = styled.div`
     align-items: center;
 
     position: absolute;
-    bottom: 0;
+    bottom: 1%;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -121,7 +121,7 @@ export const CustomedInputPrice = styled.div`
     align-items: center;
 
     position: absolute;
-    bottom: 0;
+    bottom: 1%;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -134,7 +134,7 @@ export const CustomedInputPrice = styled.div`
 
   .loadingTitle {
     margin: 0;
-    color: #767676;
+    color: black;
     line-height: 36px;
     font-family: Pretendard;
     font-size: 24px;
@@ -146,7 +146,7 @@ export const CustomedInputPrice = styled.div`
   }
 
   .loadingStrong {
-    color: #e1e1e8;
+    color: black;
     text-align: center;
 
     font-family: Pretendard;
