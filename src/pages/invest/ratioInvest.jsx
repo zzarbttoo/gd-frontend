@@ -16,7 +16,6 @@ function RatioInvest(props) {
         <span className="ratioPrice">50,000원</span>을 투자할까요?
       </p>
       <div className="investBtn">투자하기</div>
-      <NavBar />
     </CustomedInputPrice>
   );
 }
