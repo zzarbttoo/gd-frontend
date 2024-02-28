@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { CustomedInputPrice } from "../../styled/inputPrice";
 import { BackButton } from "../../styled/investDetail";
 
@@ -30,30 +30,44 @@ function InputPrice(props) {
     }
     console.log("Invest amount:", investAmount); // 예시: 입력된 투자 금액을 콘솔에 출력
     // 이곳에 다음 단계로 넘어가는 로직 추가
-    navigate('/ratio-price');
+    navigate("/ratio-price");
   };
 
   const handleGoBack = () => {
     navigate(-1);
-  }
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/complete");
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
     <CustomedInputPrice>
-      <div style={{ margin: '20px 10px 0px 10px' }}>
+      <div style={{ margin: "20px 10px 0px 10px" }}>
         <BackButton onClick={handleGoBack}></BackButton>
       </div>
       <p
         style={{
-          fontSize: '24px',
-          marginTop: '30px',
-          marginBottom: '10px'
-        }}>
-        <span style={{
-          fontWeight: '700',
-          marginLeft: '20px',
-          fontSize: '24px',
-        }}>
-          서귀포시 성산읍 빈집 8483</span> 에</p>
+          fontSize: "24px",
+          marginTop: "30px",
+          marginBottom: "10px",
+        }}
+      >
+        <span
+          style={{
+            fontWeight: "700",
+            marginLeft: "20px",
+            fontSize: "24px",
+          }}
+        >
+          서귀포시 성산읍 빈집 8483
+        </span>{" "}
+        에
+      </p>
       <input
         type="number"
         className="inputNum"
@@ -61,25 +75,26 @@ function InputPrice(props) {
         onChange={handleChange}
         placeholder="얼마를 투자하시겠어요?"
         style={{
-          marginTop: '0px',
-          width: '300px',
-          height: 'auto',
-          fontSize: '16px',
-          padding: '8px 0px 8px 0px',
-          marginLeft: '20px',
-          fontWeight: '500'
+          marginTop: "0px",
+          width: "300px",
+          height: "auto",
+          fontSize: "16px",
+          padding: "8px 0px 8px 0px",
+          marginLeft: "20px",
+          fontWeight: "500",
         }}
       />
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        margin: '0 auto',
-      }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          margin: "0 auto",
+        }}
+      >
         <div className="nextBtn" onClick={handleNext}>
           다음
         </div>
       </div>
-     
     </CustomedInputPrice>
   );
 }

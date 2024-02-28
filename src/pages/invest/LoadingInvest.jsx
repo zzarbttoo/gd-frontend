@@ -1,13 +1,24 @@
-import React from "react";
-import NavBar from "../../components/NavBar";
+import React, { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { CustomedInputPrice } from "../../styled/inputPrice";
 import loadingImg from "../../asset/loadingMark.png";
 
-function LoadingInvest(props) {
+const LoadingInvest = (props) => {
+  const navigate = useNavigate();
+  const { state } = useLocation();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/complete");
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
     <CustomedInputPrice>
       <p className="loadingTitle">
-        <span className="ratioPrice">50,000원</span>을 투자 중입니다
+        <span className="ratioPrice">50000원</span>을 투자 중입니다
       </p>
       <p className="loadingStrong">잠시만 기다려주세요!</p>
       <div className="loadingAni">
@@ -17,6 +28,6 @@ function LoadingInvest(props) {
       <img src={loadingImg} className="loadingImg" alt="example image" />
     </CustomedInputPrice>
   );
-}
+};
 
 export default LoadingInvest;

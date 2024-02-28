@@ -4,7 +4,6 @@ export const CustomedInputPrice = styled.div`
   width: 100%;
   height: 100%;
   margin: 0;
- 
 
   .arrowIcon {
     width: 10px;
@@ -180,7 +179,7 @@ export const CustomedInputPrice = styled.div`
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    animation: fill 60s linear forwards; /* fill 애니메이션을 적용 */
+    animation: fill 2s linear forwards; /* fill 애니메이션을 적용 */
   }
 
   .loadingText {
@@ -206,7 +205,7 @@ export const CustomedInputPrice = styled.div`
     width: 95.687px;
     height: 85.496px;
     position: absolute;
-    animation: moveRight 60s linear forwards;
+    animation: moveRight 2.2s linear forwards;
     left: 0; /* 초기 위치를 설정합니다. */
   }
   @keyframes moveRight {
