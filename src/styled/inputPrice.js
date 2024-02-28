@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 export const CustomedInputPrice = styled.div`
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 
@@ -12,6 +13,13 @@ export const CustomedInputPrice = styled.div`
     margin-top: 18px;
     margin-left: 25px;
     margin-bottom: 27px;
+  }
+  .arrowIcon2 {
+    width: 10px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 18px;
+    margin-left: 25px;
   }
 
   .addressTitle {
@@ -202,5 +210,9 @@ export const CustomedInputPrice = styled.div`
     to {
       left: 100%; /* 1분 동안 100%로 이동 */
     }
+  }
+
+  .completeImg {
+    width: 390px;
   }
 `;

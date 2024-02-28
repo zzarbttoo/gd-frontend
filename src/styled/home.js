@@ -6,6 +6,7 @@ export const CustomedHome = styled.div`
   padding: 0;
   overflow: hidden;
   position: relative;
+  background-color: #f8f8fa;
 
   p {
     margin: 0;
