@@ -15,7 +15,6 @@ function Home(props) {
     <div>
       <CustomedHome>
         <img src={BannerImg} className="bannerImg" alt="Example Image" />
-
         <AssetBox className="recentAsset">
           <p className="recent">현재</p>
           <p className="asset">김구름님의 자산</p>
