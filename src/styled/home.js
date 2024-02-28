@@ -5,7 +5,6 @@ export const CustomedHome = styled.div`
   margin: 0;
   padding: 0;
   overflow: hidden;
-
   position: relative;
 
   p {
@@ -13,14 +12,14 @@ export const CustomedHome = styled.div`
   }
 
   .bannerImg {
-    width: 390px;
-    height: 446px;
+    width: 100%;
+    height: 470px;
   }
 `;
 
 export const AssetBox = styled.div`
   position: absolute; /* Card에 대한 절대 포지셔닝 */
-  top: 400px;
+  top: 430px;
   left: 50%;
   transform: translateX(-50%);
   width: 350px;
@@ -59,7 +58,7 @@ export const AssetBox = styled.div`
 `;
 
 export const CardView = styled.div`
-  width: 350px;
+  width: 100%;
   height: 180px;
   margin-left: 20px;
   margin-top: 100px;
